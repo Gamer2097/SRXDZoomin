@@ -4,7 +4,7 @@ using BepInEx.Configuration;
 
 namespace ZoomIn
 {
-    [BepInPlugin("Zoomin", "Zoomin", "1.0.1")]
+    [BepInPlugin("Zoomin", "Zoomin", "1.0.2")]
     public class Zoomin : BaseUnityPlugin
     {
         public static ConfigEntry<int> Fieldofview { get; private set; }
@@ -14,7 +14,7 @@ namespace ZoomIn
             
             Fieldofview = Config.Bind("Field of View value",
                                       "FoV",
-                                      80,
+                                      90,
                                       "Sets the FoV when you play a track");
             Harmony.CreateAndPatchAll(typeof(cameraPatches));
         }
